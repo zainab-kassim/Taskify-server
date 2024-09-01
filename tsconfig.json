@@ -8,6 +8,6 @@
     "esModuleInterop": true,          // Enables compatibility with CommonJS modules
     "skipLibCheck": true              // Skip type checking of declaration files
   },
-  "include": ["index.ts"],       // Include all TypeScript files in the src directory
+  "include": ["api/index.ts"],       // Include all TypeScript files in the src directory
   "exclude": ["node_modules"]         // Exclude node_modules directory
 }

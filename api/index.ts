@@ -5,13 +5,13 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import Task from './models/task'; // Import your Task model
-import passport from './passport-auth/passport'
-import User from './models/user';
+import Task from '../models/task'; // Import your Task model
+import passport from '../passport-auth/passport'
+import User from '../models/user';
 import bcrypt from 'bcrypt';
-import generateToken from './passport-auth/auth';
-import isLoggedIn from './utils//isLoggedIn';
-import handleAsyncErr from './utils/catchError';
+import generateToken from '../passport-auth/auth';
+import isLoggedIn from '../utils/isLoggedIn';
+import handleAsyncErr from '../utils/catchError';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 
@@ -193,3 +193,4 @@ const VERCEL_URL = process.env.VERCEL_URL || `http://localhost:${PORT}`;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+export default app
