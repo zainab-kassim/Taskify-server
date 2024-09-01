@@ -190,6 +190,6 @@ app.delete('/api/task/:id/delete', isLoggedIn, handleAsyncErr(async (req, res) =
 // Start your server
 const PORT = process.env.PORT || 4000;
 const VERCEL_URL = process.env.VERCEL_URL || `http://localhost:${PORT}`;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT||VERCEL_URL, () => {
+  console.log(`Server running on port ${PORT}||${VERCEL_URL}`);
 });
