@@ -23,7 +23,7 @@ dotenv.config();
 const mongoURI = process.env.MONGODB_URL;
 const connectDB = async () => {
   // Use environment variable for MongoDB connection string
-  
+
 
   if (!mongoURI) {
     throw new Error("MongoDB connection string is not defined in environment variables");
@@ -190,6 +190,6 @@ app.delete('/api/task/:id/delete', isLoggedIn, handleAsyncErr(async (req, res) =
 // Start your server
 const PORT = process.env.PORT || 4000;
 const VERCEL_URL = process.env.VERCEL_URL || `http://localhost:${PORT}`;
-app.listen(PORT||VERCEL_URL, () => {
-  console.log(`Server running on port ${PORT}||${VERCEL_URL}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
